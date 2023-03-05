@@ -12,7 +12,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	</head>
 	<body class="bg-slate-400">
 		<div class="container max-w-screen-2xl bg-slate-100">		
-			<div class="container w-5/6">
+			<div class="container w-11/12">
 				<Header title={SITE_TITLE} />
 			</div>
 			<div class="text-center text-white tracking-[0.4em] bg-[url('../sky.jpeg')]">
@@ -22,20 +22,26 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 					{SITE_DESCRIPTION}
 				</p>
 			</div>
-			<div class="container w-5/6 flex flex-wrap">
-				<div class="container md:w-4/6">
-					Blog stuff Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et metus eleifend, ultricies quam ut, cursus turpis. Nulla in erat non enim dignissim facilisis vitae aliquam felis. Sed porta lacinia erat sed aliquet. Cras pulvinar vitae eros ac tempor. Sed congue feugiat sagittis. Integer congue faucibus magna eu placerat. Nam non dictum sapien, nec posuere lacus. Vivamus in aliquam sem. Maecenas sed leo lacus. Nam ut auctor lectus, eu tempus orci.
-
-					Quisque pulvinar nisi at quam sollicitudin rutrum. Donec mattis mollis neque, nec tincidunt augue auctor vel. Ut suscipit tellus est, et eleifend tortor venenatis sed. Cras tincidunt eros molestie, volutpat leo ut, ornare erat. Sed non viverra ante, non commodo diam. Donec vitae quam sit amet velit porttitor hendrerit. Etiam libero enim, dapibus at tempus eu, elementum euismod sapien. Integer sit amet mi nec orci consectetur efficitur ac consectetur ex. Maecenas in pharetra velit. Donec nec eros mollis, convallis justo nec, venenatis libero. In a augue vitae quam venenatis vulputate non a risus. Morbi dictum massa nec arcu suscipit, non luctus ipsum molestie. Sed sodales purus sem, nec mollis mauris aliquam at. Fusce eget erat bibendum, suscipit nunc at, hendrerit lectus.
+			<div class="container w-11/12 flex flex-wrap my-10">
+				<div class="container md:w-8/12 lg:w-9/12">
+					<div class="m-3 bg-white p-5">
+						Blog stuff Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et metus eleifend, ultricies quam ut, cursus turpis. Nulla in erat non enim dignissim facilisis vitae aliquam felis. Sed porta lacinia erat sed aliquet. Cras pulvinar vitae eros ac tempor. Sed congue feugiat sagittis. Integer congue faucibus magna eu placerat. Nam non dictum sapien, nec posuere lacus. Vivamus in aliquam sem. Maecenas sed leo lacus. Nam ut auctor lectus, eu tempus orci.
+	
+						Quisque pulvinar nisi at quam sollicitudin rutrum. Donec mattis mollis neque, nec tincidunt augue auctor vel. Ut suscipit tellus est, et eleifend tortor venenatis sed. Cras tincidunt eros molestie, volutpat leo ut, ornare erat. Sed non viverra ante, non commodo diam. Donec vitae quam sit amet velit porttitor hendrerit. Etiam libero enim, dapibus at tempus eu, elementum euismod sapien. Integer sit amet mi nec orci consectetur efficitur ac consectetur ex. Maecenas in pharetra velit. Donec nec eros mollis, convallis justo nec, venenatis libero. In a augue vitae quam venenatis vulputate non a risus. Morbi dictum massa nec arcu suscipit, non luctus ipsum molestie. Sed sodales purus sem, nec mollis mauris aliquam at. Fusce eget erat bibendum, suscipit nunc at, hendrerit lectus.
+					</div>
 				</div>
-				<div class="container md:w-2/6">
-					<h2 class="uppercase">About me</h2>
-					<hr />
-					<div class="text-center border-2 border-gray-220 rounded-lg">
-						<img /><br />
-						<p class="text-lg">Mika Ahopelto</p>
-						<p>
-							Life learner, blogger, entrepreneurer, tech guy, outdoor and family man. Continuously searching for good questions and problems to solve in work, technology, life and the world in general.						</p>
+				<div class="container md:w-4/12 lg:w-3/12">
+					<div class="m-3 bg-white p-5">
+						<h2 class="uppercase mb-2">About me</h2>
+						<hr class="border-0 bg-sky-400 h-1 w-12 mb-5"/>
+						<div class="min-w-220 text-center border-2 border-gray-220 rounded-lg">
+							<img src="me.jpeg" class="rounded-full p-[10%]" />
+							<p class="text-lg px-5 pb-5">Mika Ahopelto</p>
+							<p class="px-5 pb-5">
+								Life learner, blogger, entrepreneurer, tech guy, outdoor and family man. Continuously searching for good questions and problems to solve in work, technology, life and the world in general.						
+							</p>
+							<div class="bg-gray-200 rounded-b-lg">asdf</div>
+						</div>
 					</div>
 				</div>
 			</div>
