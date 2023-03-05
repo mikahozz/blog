@@ -10,41 +10,36 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/pages/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
+	<body class="bg-slate-400">
+		<div class="container max-w-screen-2xl bg-slate-100">		
+			<div class="container w-5/6">
+				<Header title={SITE_TITLE} />
+			</div>
+			<div class="text-center text-white tracking-[0.4em] bg-[url('../sky.jpeg')]">
+				<h1 class="text-6xl uppercase font-bold pt-24 pb-8">{SITE_TITLE}</h1>
+				<hr class="w-64 h-[2px] bg-white border-0 mx-auto" />
+				<p class="text-base pt-5 pb-10">
+					{SITE_DESCRIPTION}
+				</p>
+			</div>
+			<div class="container w-5/6 flex flex-wrap">
+				<div class="container md:w-4/6">
+					Blog stuff Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et metus eleifend, ultricies quam ut, cursus turpis. Nulla in erat non enim dignissim facilisis vitae aliquam felis. Sed porta lacinia erat sed aliquet. Cras pulvinar vitae eros ac tempor. Sed congue feugiat sagittis. Integer congue faucibus magna eu placerat. Nam non dictum sapien, nec posuere lacus. Vivamus in aliquam sem. Maecenas sed leo lacus. Nam ut auctor lectus, eu tempus orci.
+
+					Quisque pulvinar nisi at quam sollicitudin rutrum. Donec mattis mollis neque, nec tincidunt augue auctor vel. Ut suscipit tellus est, et eleifend tortor venenatis sed. Cras tincidunt eros molestie, volutpat leo ut, ornare erat. Sed non viverra ante, non commodo diam. Donec vitae quam sit amet velit porttitor hendrerit. Etiam libero enim, dapibus at tempus eu, elementum euismod sapien. Integer sit amet mi nec orci consectetur efficitur ac consectetur ex. Maecenas in pharetra velit. Donec nec eros mollis, convallis justo nec, venenatis libero. In a augue vitae quam venenatis vulputate non a risus. Morbi dictum massa nec arcu suscipit, non luctus ipsum molestie. Sed sodales purus sem, nec mollis mauris aliquam at. Fusce eget erat bibendum, suscipit nunc at, hendrerit lectus.
+				</div>
+				<div class="container md:w-2/6">
+					<h2 class="uppercase">About me</h2>
+					<hr />
+					<div class="text-center border-2 border-gray-220 rounded-lg">
+						<img /><br />
+						<p class="text-lg">Mika Ahopelto</p>
+						<p>
+							Life learner, blogger, entrepreneurer, tech guy, outdoor and family man. Continuously searching for good questions and problems to solve in work, technology, life and the world in general.						</p>
+					</div>
+				</div>
+			</div>
+			<Footer />
+		</div>
 	</body>
 </html>
