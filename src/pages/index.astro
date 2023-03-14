@@ -2,53 +2,48 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Layout from '../layouts/Layout.astro'
 import { SITE_TITLE, SITE_DESCRIPTION, ABOUT_ME } from '../consts';
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body class="bg-cyan-900">
-		<div class="container max-w-screen-2xl bg-slate-100 min-h-screen">
-			<header class="container w-11/12">
-				<Header title={SITE_TITLE} />
-			</header>
-			<!-- Hero -->
-			<div class="text-center text-white tracking-[0.4em] bg-[url('../sky.jpeg')] bg-cover">
-				<h1 class="text-6xl uppercase font-bold pt-24 pb-8">{SITE_TITLE}</h1>
-				<hr class="w-64 h-[2px] bg-white border-0 mx-auto" />
-				<p class="text-base pt-5 pb-10">
-					{SITE_DESCRIPTION}
-				</p>
-			</div>
-			<main class="md:grid md:grid-cols-12 md:gap-6 p-3">
-				<section class="col-span-8 bg-white p-5 mt-3">
-					Blog stuff Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et metus eleifend, ultricies quam ut, cursus turpis. Nulla in erat non enim dignissim facilisis vitae aliquam felis. Sed porta lacinia erat sed aliquet. Cras pulvinar vitae eros ac tempor. Sed congue feugiat sagittis. Integer congue faucibus magna eu placerat. Nam non dictum sapien, nec posuere lacus. Vivamus in aliquam sem. Maecenas sed leo lacus. Nam ut auctor lectus, eu tempus orci.
+<Layout>
+	<!-- Hero -->
+	<div class="text-center text-white bg-[url('../sky.jpeg')] bg-cover p-1">
+		<h1 class="md:text-6xl uppercase tracking-[0.4em] font-bold pt-24 pb-8">{SITE_TITLE}</h1>
+		<hr class="w-2/12 h-[2px] bg-white border-0 mx-auto" />
+		<p class="pt-5 pb-10">
+			{SITE_DESCRIPTION}
+		</p>
+	</div>
+	<!-- <main class="md:grid md:grid-cols-12 md:gap-6 p-3"> -->
+	<main class="md:grid md:grid-cols-12 md:gap-6 px-[5%] py-3">
+		<!-- <section class="col-span-8 bg-white p-5 mt-3"> -->
+		<section class="col-span-8 bg-white px-[5%] py-3 mt-3">
+			Blog stuff Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et metus eleifend, ultricies quam ut, cursus turpis. Nulla in erat non enim dignissim facilisis vitae aliquam felis. Sed porta lacinia erat sed aliquet. Cras pulvinar vitae eros ac tempor. Sed congue feugiat sagittis. Integer congue faucibus magna eu placerat. Nam non dictum sapien, nec posuere lacus. Vivamus in aliquam sem. Maecenas sed leo lacus. Nam ut auctor lectus, eu tempus orci.
 
-					Quisque pulvinar nisi at quam sollicitudin rutrum. Donec mattis mollis neque, nec tincidunt augue auctor vel. Ut suscipit tellus est, et eleifend tortor venenatis sed. Cras tincidunt eros molestie, volutpat leo ut, ornare erat. Sed non viverra ante, non commodo diam. Donec vitae quam sit amet velit porttitor hendrerit. Etiam libero enim, dapibus at tempus eu, elementum euismod sapien. Integer sit amet mi nec orci consectetur efficitur ac consectetur ex. Maecenas in pharetra velit. Donec nec eros mollis, convallis justo nec, venenatis libero. In a augue vitae quam venenatis vulputate non a risus. Morbi dictum massa nec arcu suscipit, non luctus ipsum molestie. Sed sodales purus sem, nec mollis mauris aliquam at. Fusce eget erat bibendum, suscipit nunc at, hendrerit lectus.
-				</section>
-				<section class="col-span-4 mt-3">
-					<div class="bg-white p-5">
-						<h2 class="uppercase mb-2">About me</h2>
-						<hr class="border-0 bg-sky-400 h-1 w-12 mb-5"/>
-						<div class="min-w-220 text-center border-2 border-gray-220 rounded-lg">
-							<img src="me.jpeg" class="rounded-full p-[10%]" />
-							<p class="text-lg px-5 pb-5">Mika Ahopelto</p>
-							<p class="px-5 pb-5">
-								{ ABOUT_ME }
-							</p>
-							<div class="bg-gray-200 rounded-b-lg p-3 text-center">
-								<a href="https://fi.linkedin.com/in/mikaahopelto">
-									<img src="in.png" alt="LinkedIn profile" class="w-1/5 inline" />
-								</a>
-							</div>
-						</div>
+			Quisque pulvinar nisi at quam sollicitudin rutrum. Donec mattis mollis neque, nec tincidunt augue auctor vel. Ut suscipit tellus est, et eleifend tortor venenatis sed. Cras tincidunt eros molestie, volutpat leo ut, ornare erat. Sed non viverra ante, non commodo diam. Donec vitae quam sit amet velit porttitor hendrerit. Etiam libero enim, dapibus at tempus eu, elementum euismod sapien. Integer sit amet mi nec orci consectetur efficitur ac consectetur ex. Maecenas in pharetra velit. Donec nec eros mollis, convallis justo nec, venenatis libero. In a augue vitae quam venenatis vulputate non a risus. Morbi dictum massa nec arcu suscipit, non luctus ipsum molestie. Sed sodales purus sem, nec mollis mauris aliquam at. Fusce eget erat bibendum, suscipit nunc at, hendrerit lectus.
+		</section>
+		<section class="col-span-4 mt-3">
+			<!-- <div class="bg-white p-5"> -->
+			<div class="bg-white px-[5%] py-3">
+				<h2 class="uppercase mb-2">About me</h2>
+				<hr class="border-0 bg-sky-400 h-1 w-12 mb-5"/>
+				<!-- <div class="min-w-220 text-center border-2 border-gray-220 rounded-lg"> -->
+				<div class="text-center border-2 border-gray-220 rounded-lg">
+					<img src="me.jpeg" class="rounded-full p-[10%]" />
+					<!-- <p class="text-lg px-5 pb-5">Mika Ahopelto</p> -->
+					<p class="text-lg">Mika Ahopelto</p>
+					<!-- <p class="px-5 pb-5"> -->
+					<p class="px-[5%] py-3"> 
+						{ ABOUT_ME }
+					</p>
+					<div class="bg-gray-200 rounded-b-lg p-3 text-center">
+						<a href="https://fi.linkedin.com/in/mikaahopelto">
+							<img src="in.png" alt="LinkedIn profile" class="w-1/5 inline" />
+						</a>
 					</div>
-				</section>
-			</main>
-			<Footer />
-		</div>
-	</body>
-</html>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>

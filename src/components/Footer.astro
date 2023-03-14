@@ -1,13 +1,7 @@
 ---
-const today = new Date();
+import { ME } from "../consts";
 ---
 
-<footer>
-	&copy; {today.getFullYear()} Mika Ahopelto. All rights reserved.
+<footer class="text-center p-2">
+	&copy; {new Date().getFullYear()} { ME }. All rights reserved.
 </footer>
-<style>
-	footer {
-		padding: 25px;
-		text-align: center;
-	}
-</style>

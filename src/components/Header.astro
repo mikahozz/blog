@@ -1,23 +1,16 @@
 ---
 import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
+const { title } = Astro.props;
 ---
 
-<header class="py-2 my-0 mx-4">
+<!-- <header class="py-2 my-0 mx-4 flex"> -->
+<header class="px-[1%] flex justify-between">
 	<h2 class="uppercase inline pb-0">
-		{SITE_TITLE}
+		{title}
 	</h2>
-	<nav class="float-right">
+	<nav class="">
 		<HeaderLink href="/">Home</HeaderLink>
 		<HeaderLink href="/blog">Blog</HeaderLink>
 		<HeaderLink href="/about">About</HeaderLink>
 	</nav>
 </header>
-<style>
-	header {
-		margin: 0em 0 2em;
-	}
-	h2 {
-		margin: 0.5em 0;
-	}
-</style>
