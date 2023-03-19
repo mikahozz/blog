@@ -1,7 +1,7 @@
 ---
-title: "First post"
+title: "About Me"
+layout: "../layouts/PageLayout.astro"
 description: "Lorem ipsum dolor sit amet"
-pubDate: "Jul 08 2022"
 heroImage: "/sky.jpeg"
 ---
 

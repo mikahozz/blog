@@ -1,9 +1,6 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import Layout from '../layouts/Layout.astro'
-import { SITE_TITLE, SITE_DESCRIPTION, ABOUT_ME } from '../consts';
+import MainLayout from '../layouts/MainLayout.astro'
+import { SITE_TITLE, SITE_DESCRIPTION, ABOUT_ME, ME } from '../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
 
@@ -12,24 +9,25 @@ const posts = (await getCollection('blog')).sort(
 );
 ---
 
-<Layout>
+<MainLayout>
 	<!-- Hero -->
 	<div class="text-center text-white bg-[url('../sky.jpeg')] bg-cover p-1">
-		<h1 class="md:text-6xl uppercase tracking-[0.4em] font-bold pt-24 pb-8">{SITE_TITLE}</h1>
+		<h1 class="md:text-6xl text-2xl uppercase tracking-[0.4em] font-bold pt-24 pb-8">{SITE_TITLE}</h1>
 		<hr class="w-2/12 h-[2px] bg-white border-0 mx-auto" />
 		<p class="pt-5 pb-10">
 			{SITE_DESCRIPTION}
 		</p>
 	</div>
 	<main class="md:grid md:grid-cols-12 md:gap-6 px-[5%] py-3">
-		<section class="col-span-8 bg-white px-[5%] py-3 mt-3 grid md:grid-cols-2 gap-2">
+		<section class="col-span-8 grid md:grid-cols-2 gap-5">
 			{ posts.map(post => (
-				<div class="">
-					<a href={`/blog/${post.slug}`} class="border-1 block">
-						<img src="/sky.jpeg" />
-						<span class="text-gray-500 text-md"><FormattedDate date={post.data.pubDate} /></span><br />
-						<span class="font-bold text-lg">{post.data.title}</span><br />
-						<span>{post.data.description}</span><br />
+				<div class="bg-white mt-3">
+					<a href={`/blog/${post.slug}`} class="block pb-5">
+						<img src={post.data.heroImage} class="pb-3" />
+						<span class="text-gray-500 text-sm px-[5%]"><FormattedDate date={post.data.pubDate} /></span>
+						<br />
+						<span class="font-bold text-lg px-[5%]">{post.data.title}</span><br />
+						<span class="px-[5%] block">{post.data.description}</span><br />
 						</a>
 				</div>
 				))}
@@ -40,7 +38,7 @@ const posts = (await getCollection('blog')).sort(
 				<hr class="border-0 bg-sky-400 h-1 w-12 mb-5"/>
 				<div class="text-center border-2 border-gray-220 rounded-lg">
 					<img src="me.jpeg" class="rounded-full p-[10%]" />
-					<p class="text-lg">Mika Ahopelto</p>
+					<p class="text-lg">{ ME }</p>
 					<p class="px-[5%] py-3"> 
 						{ ABOUT_ME }
 					</p>
@@ -53,4 +51,4 @@ const posts = (await getCollection('blog')).sort(
 			</div>
 		</section>
 	</main>
-</Layout>
+</MainLayout>
