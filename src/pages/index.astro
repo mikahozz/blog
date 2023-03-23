@@ -1,6 +1,7 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro'
-import { SITE_TITLE, SITE_DESCRIPTION, ABOUT_ME, ME } from '../consts';
+import AboutMe from '../components/AboutMe.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
 
@@ -33,22 +34,7 @@ const posts = (await getCollection('blog')).sort(
 				))}
 		</section>
 		<section class="col-span-4 mt-3">
-			<div class="bg-white px-[5%] py-3">
-				<h2 class="uppercase mb-2">About me</h2>
-				<hr class="border-0 bg-sky-400 h-1 w-12 mb-5"/>
-				<div class="text-center border-2 border-gray-220 rounded-lg">
-					<img src="me.jpeg" class="rounded-full p-[10%]" />
-					<p class="text-lg">{ ME }</p>
-					<p class="px-[5%] py-3"> 
-						{ ABOUT_ME }
-					</p>
-					<div class="bg-gray-200 rounded-b-lg p-3 text-center">
-						<a href="https://fi.linkedin.com/in/mikaahopelto">
-							<img src="in.png" alt="LinkedIn profile" class="w-1/5 inline" />
-						</a>
-					</div>
-				</div>
-			</div>
+			<AboutMe />
 		</section>
 	</main>
 </MainLayout>
