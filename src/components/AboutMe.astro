@@ -1,5 +1,5 @@
 ---
-import { ABOUT_ME, ME } from '../consts';
+import { ABOUT_ME, ME, LINKEDIN } from '../consts';
 ---
 <div class="bg-white px-[5%] py-3">
     <h2 class="uppercase mb-2">About me</h2>
@@ -11,7 +11,7 @@ import { ABOUT_ME, ME } from '../consts';
             { ABOUT_ME }
         </p>
         <div class="bg-gray-200 rounded-b-lg p-3 text-center">
-            <a href="https://fi.linkedin.com/in/mikaahopelto">
+            <a href={LINKEDIN}>
                 <img src="in.png" alt="LinkedIn profile" class="w-1/5 inline" />
             </a>
         </div>

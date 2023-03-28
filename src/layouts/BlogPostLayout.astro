@@ -9,13 +9,13 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
 <MainLayout>
 	<main class="md:grid md:grid-cols-12 md:gap-6 px-[5%] py-3 bg-white">
-		<article class="col-span-8">
+		<article class="col-span-8 prose">
 			<img src={heroImage} />
 			<FormattedDate date={pubDate} />
 			<h1 class="font-bold text-3xl">{title}</h1>
 			<slot />
 		</article>
-		<section class="col-span-4 mt-3">
+		<section class="col-span-4 mt-5">
 		</section>
 	</main>
 </MainLayout>
