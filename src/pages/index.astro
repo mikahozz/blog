@@ -10,7 +10,7 @@ const posts = (await getCollection('blog')).sort(
 );
 ---
 
-<MainLayout>
+<MainLayout title={SITE_TITLE}>
 	<!-- Hero -->
 	<div class="text-center text-white bg-[url('../sky.jpeg')] bg-cover p-1">
 		<h1 class="md:text-6xl text-2xl uppercase tracking-[0.4em] font-bold pt-24 pb-8">{SITE_TITLE}</h1>
@@ -27,7 +27,7 @@ const posts = (await getCollection('blog')).sort(
 						<img src={post.data.heroImage} class="pb-3" />
 						<div class="text-gray-500 text-sm px-[5%]"><FormattedDate date={post.data.pubDate} /></div>
 						<h1 class="font-bold text-lg px-[5%]">{post.data.title}</h1>
-						<div class="px-[5%] block">{post.data.description}</div>
+						<div class="px-[5%] py-[2%] block">{post.data.description}</div>
 						</a>
 				</div>
 				))}
