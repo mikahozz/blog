@@ -1,8 +1,8 @@
 {
-    "name": "Starter",
-    "short_name": "Starter",
+    "name": "Hackin' and Rollin'",
+    "short_name": "HackinRollin",
     "icons": [{
-        "src": "google-touch-icon.png",
+        "src": "favicon512.png",
         "sizes": "512x512"
     }],
     "background_color": "#ffffff",
