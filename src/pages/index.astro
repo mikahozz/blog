@@ -24,7 +24,7 @@ const posts = (await getCollection('blog')).sort(
 			{ posts.map(post => (
 				<div class="bg-white mt-3">
 					<a href={`/blog/${post.slug}`} class="block pb-5">
-						<img src={post.data.heroImage} class="pb-3" />
+						<img src={post.data.heroImage} class="pb-3 min-h-[300px]" alt="Blog thumbnail image"/>
 						<div class="text-gray-500 text-sm px-[5%]"><FormattedDate date={post.data.pubDate} /></div>
 						<h1 class="font-bold text-lg px-[5%]">{post.data.title}</h1>
 						<div class="px-[5%] py-[2%] block">{post.data.description}</div>

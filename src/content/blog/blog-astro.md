@@ -2,7 +2,7 @@
 title: "I rebuilt my blog with Astro. Goodbye Wordpress!"
 description: "A small step for me, but a giant tech leap from Wordpress to Astro. It had been coming for a long time. I had built and maintained a couple of Wordpress sites for years, including my dusty old blog site..."
 pubDate: "Jul 08 2022"
-heroImage: "/final-blog.png"
+heroImage: "/final-blog-small.jpg"
 ---
 
 It had been coming for a long time. I had built and maintained a couple of Wordpress sites for years, including my dusty old blog site. I had almost forgotten it, but gotten reminded periodically by email that I should update this and that. Needless to say I had better things to do, but one day I noticed that the site wasn't even up anymore! Shiit.
@@ -43,7 +43,7 @@ npm run dev
 ```
 
 And voila! We have the first Astro website up:
-![Astro first run](/astro-initial.png)
+![Astro first run](/astro-initial-small.png)
 
 ## Setting up the basic page layout
 
@@ -282,7 +282,7 @@ The final part of the blog site is to add an About me section to the index.astro
 
 ## And, that's it!
 We have our first blog site with random images ready: 
-![](/final-blog.png)
+![](/final-blog-small.jpg)
 
 ## Final thoughts
 Building a blog site with Astro and Tailwind is quite easy. Both have superb documentation and guidelines for getting things done. However, this is still a techie way of building a site. If you want to avoid the geekiness, I think safest is to find a fully managed platform like Wix or Wordpress.com.

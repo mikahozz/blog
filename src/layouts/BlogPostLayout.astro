@@ -3,6 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
 import MainLayout from './MainLayout.astro';
 import AboutMe from '../components/AboutMe.astro';
+import { componentIsHTMLElement } from 'astro/dist/runtime/server/render/dom';
 
 type Props = CollectionEntry<'blog'>['data'];
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
@@ -11,7 +12,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 <MainLayout title={title}>
 	<main class="md:grid md:grid-cols-12 md:gap-6 px-[5%] py-3 bg-white">
 		<article class="col-span-8 prose md:max-w-[80%] pt-10 pb-20">
-			<img src={heroImage} />
+			<img src={heroImage} alt="Blog image" />
 			<FormattedDate date={pubDate} />
 			<h1 class="font-bold text-3xl">{title}</h1>
 			<slot />

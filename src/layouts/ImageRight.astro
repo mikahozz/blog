@@ -18,7 +18,7 @@ const { title, description, pubDate, updatedDate, heroImage, image } = Astro.pro
 			</article>
 		</section>
 		<section class="col-span-5 md:mt-24">
-			<img src={image} class="w-80">
+			<img src={image} class="w-80" alt={`Image for ${title}`}>
 		</section>
 	</main>
 </MainLayout>
