@@ -1,6 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro'
-import AboutMe from '../components/AboutMe.astro';
+import AboutBlog from '../components/AboutBlog.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
@@ -33,7 +33,7 @@ const posts = (await getCollection('blog')).sort(
 				))}
 		</section>
 		<section class="col-span-4 mt-3">
-			<AboutMe />
+			<AboutBlog />
 		</section>
 	</main>
 </MainLayout>

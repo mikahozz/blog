@@ -2,11 +2,10 @@
 import type { CollectionEntry } from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
 import MainLayout from './MainLayout.astro';
-import AboutMe from '../components/AboutMe.astro';
-import { componentIsHTMLElement } from 'astro/dist/runtime/server/render/dom';
+import AboutBlog from '../components/AboutBlog.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, pubDate, heroImage } = Astro.props;
 ---
 
 <MainLayout title={title}>
@@ -18,7 +17,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			<slot />
 		</article>
 		<section class="col-span-4 mt-5">
-			<AboutMe />
+			<AboutBlog />
 		</section>
 	</main>
 </MainLayout>
